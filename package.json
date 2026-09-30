@@ -1,0 +1,32 @@
+{
+  "name": "cvgenerator",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "description": "Human-in-the-loop resume tailoring and cover letter pipeline",
+  "scripts": {
+    "cv": "tsx src/cli.ts",
+    "generate:pdf": "tsx src/cli.ts pdf",
+    "generate:docx": "tsx src/cli.ts docx",
+    "test": "vitest run",
+    "typecheck": "tsc --noEmit"
+  },
+  "dependencies": {
+    "@anthropic-ai/sdk": "^0.124.0",
+    "@inquirer/prompts": "^8.7.2",
+    "commander": "^15.0.0",
+    "docx": "^9.8.1",
+    "dotenv": "^17.4.2",
+    "marked": "^18.0.14",
+    "playwright-core": "^1.63.0",
+    "yaml": "^2.9.0",
+    "zod": "^4.5.4"
+  },
+  "devDependencies": {
+    "@types/node": "^22.20.1",
+    "jszip": "^3.10.2",
+    "tsx": "^4.23.13",
+    "typescript": "^7.0.2",
+    "vitest": "^5.0.0"
+  }
+}

@@ -1,0 +1,15 @@
+# Bank of concrete stories the cover letter can draw from. Add to it over time.
+anecdotes:
+  - id: ledger-migration
+    title: Migrating the ledger without downtime
+    situation: FinPay's ledger ran on a single PostgreSQL instance that was hitting write limits during month-end close.
+    action: I designed a dual-write migration to a sharded schema, ran both systems in parallel for three weeks, and reconciled every night.
+    result: We cut over with zero customer-visible downtime and no reconciliation differences.
+    skills: [PostgreSQL, distributed systems, migrations]
+  - id: contract-tests
+    title: Stopping integration incidents at Shoply
+    situation: Twelve services were breaking each other's assumptions weekly and nobody owned the interfaces.
+    action: I proposed consumer-driven contract tests, wrote the first ten, and paired with each team to add theirs.
+    result: Integration incidents fell by 60% over two quarters.
+    skills: [testing, microservices]
+    metric: 60%

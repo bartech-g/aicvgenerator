@@ -1,0 +1,74 @@
+# Base resume. Every bullet has a stable id; the tailor may only reference these ids.
+# Keep numbers in `metric` when possible so the verifier can check them.
+basics:
+  name: Jane Example
+  label: Backend Engineer
+  email: jane@example.com
+  phone: "+48 600 000 000"
+  location: Warsaw, Poland
+  summary: Backend engineer with 6 years building payment and ledger systems in TypeScript and Go.
+  profiles:
+    - network: GitHub
+      url: https://github.com/jane-example
+work:
+  - id: work-finpay
+    company: FinPay
+    position: Senior Backend Engineer
+    location: Warsaw
+    startDate: "2022-03"
+    bullets:
+      - id: finpay-1
+        text: Designed and shipped a double-entry ledger service in Go handling 1.2M transactions per day.
+        skills: [Go, PostgreSQL, distributed systems]
+        metric: 1.2M transactions per day
+      - id: finpay-2
+        text: Cut p99 latency of the settlement API from 800ms to 120ms by batching writes and adding a read replica.
+        skills: [PostgreSQL, performance]
+        metric: 800ms to 120ms
+      - id: finpay-3
+        text: Mentored two junior engineers through their first production launches.
+        skills: [mentoring]
+  - id: work-shoply
+    company: Shoply
+    position: Backend Engineer
+    startDate: "2019-06"
+    endDate: "2022-02"
+    bullets:
+      - id: shoply-1
+        text: Built the order pipeline in Node.js and TypeScript, processing 40k orders a day across 3 regions.
+        skills: [Node.js, TypeScript, AWS]
+        metric: 40k orders a day
+      - id: shoply-2
+        text: Introduced contract tests between 12 services, reducing integration incidents by 60%.
+        skills: [testing, microservices]
+        metric: 60%
+projects:
+  - id: proj-ledgerkit
+    name: ledgerkit
+    url: https://github.com/jane-example/ledgerkit
+    description: Open-source double-entry ledger library.
+    bullets:
+      - id: ledgerkit-1
+        text: Maintain an open-source ledger library with 400 GitHub stars and 9 external contributors.
+        skills: [Go, open source]
+        metric: 400 stars, 9 contributors
+education:
+  - id: edu-pw
+    institution: Warsaw University of Technology
+    area: Computer Science
+    studyType: BSc
+    startDate: "2015"
+    endDate: "2019"
+skills:
+  - name: Languages
+    keywords: [TypeScript, Go, SQL]
+  - name: Infrastructure
+    keywords: [PostgreSQL, AWS, Docker, Kubernetes]
+  - name: Practices
+    keywords: [testing, microservices, performance, mentoring]
+languages:
+  - language: English
+    fluency: fluent
+  - language: Polish
+    fluency: native
+pending: []
